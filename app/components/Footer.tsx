@@ -14,10 +14,10 @@ function Footer() {
     ];
 
     return (
-        <section className="w-full bg-[#dcfd00] rounded-t-3xl overflow-hidden px-6 py-16 flex flex-col justify-between">
+        <section className="w-sm sm:w-full bg-[#dcfd00] rounded-t-3xl overflow-hidden px-6 py-16 flex flex-col justify-between">
             {/* NORMAL CONTENT */}
             <div className="z-10 h-70 md:h-90 md:p-10 flex flex-col justify-between text-black">
-                <div className="w-full h-40 flex justify-start gap-20">
+                <div className="w-full h-40 flex justify-start gap-5 sm:gap-20">
                     <div className="flex flex-col">
                         <h1 className="w-40 mb-5 border-b-4 text-xl">Useful Links</h1>
                         {navLinks.map((link) => (
