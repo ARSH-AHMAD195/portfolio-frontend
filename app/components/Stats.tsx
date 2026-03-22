@@ -23,7 +23,7 @@ const stats = [
 function Stats() {
   return (
     <section>
-        <div className="mt-20 container mx-auto">
+        <div className="mt-5 lg:mt-10 container mx-auto">
             <div className="flex flex-wrap gap-6 max-w-[80vw] mx-auto lg:max-w-none">
                 {stats.map((item,index) => {
                     return <div className="flex-1 flex gap-4 items-center justify-center lg:justify-start text-sm lg:text-lg font-bold" key={index}>
