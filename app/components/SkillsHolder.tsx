@@ -47,8 +47,7 @@ const sections = [
 function SkillsHolder() {
   return (
     <section className="w-full h-fit my-10 md:my-20 flex justify-center items-center">
-        
-            <div className="w-md md:w-7xl relative inline-block overflow-hidden">
+            <div className="w-sm md:w-7xl relative inline-block overflow-hidden">
                 {/* TOP */}
                 <motion.div
                     className="absolute top-0 left-0 w-full h-1"
@@ -122,15 +121,15 @@ function SkillsHolder() {
                             key={idx}
                             className="p-5 bg-white/30 rounded-2xl border flex flex-col"
                             >
-                            <h1 className="text-xl font-black mb-3">
+                            <h1 className="text-md md:text-xl font-black mb-3">
                                 - {section.title} -
                             </h1>
 
-                            <div className="flex flex-wrap gap-4">
+                            <div className="flex flex-wrap gap-1 md:gap-4">
                                 {section.data.map((item) => (
                                 <div
                                     key={item.key}
-                                    className={`w-20 h-20 m-3 rounded-2xl border-2 shadow-[6px_6px_0px_#000] bg-white flex justify-center items-center transition-all hover:shadow-none hover:translate-y-1 group relative ${section.color}`}
+                                    className={`w-15 md:w-20 h-15 md:h-20 m-3 rounded-2xl border-2 shadow-[6px_6px_0px_#000] bg-white flex justify-center items-center transition-all hover:shadow-none hover:translate-y-1 group relative ${section.color}`}
                                 >
                                     <Image
                                     title={item.title}
