@@ -53,7 +53,7 @@ function Footer() {
 
             {/* HUGE BACKGROUND TEXT */}
             <div className="relative w-full h-10 md:h-30">
-                <h1 className="absolute -bottom-20 md:-bottom-25 left-2 md:left-50 w-full text-[90px] md:text-[250px] font-black text-black/60 leading-none whitespace-nowrap">
+                <h1 className="absolute -bottom-20 md:-bottom-25 left-2 md:left-50 w-full text-[70px]  md:text-[250px] font-black text-black/60 leading-none whitespace-nowrap">
                     Arsh.dev
                 </h1>
             </div>
