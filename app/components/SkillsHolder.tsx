@@ -128,20 +128,22 @@ function SkillsHolder() {
                             <div className="flex flex-wrap gap-1 md:gap-4">
                                 {section.data.map((item) => (
                                 <div
-                                    key={item.key}
-                                    className={`w-15 md:w-20 h-15 md:h-20 m-3 rounded-2xl border-2 shadow-[6px_6px_0px_#000] bg-white flex justify-center items-center transition-all hover:shadow-none hover:translate-y-1 group relative ${section.color}`}
+                                key={item.key}
+                                className={`w-15 md:w-20 h-15 md:h-20 m-3 rounded-2xl border-2 shadow-[6px_6px_0px_#000] bg-white flex justify-center items-center transition-all duration-300 hover:shadow-none hover:translate-y-1 group relative ${section.color}`}
                                 >
+                                <div className="relative w-8 h-8 md:w-10 md:h-10">
                                     <Image
                                     title={item.title}
                                     src={item.src}
-                                    width={40}
-                                    height={40}
                                     alt={item.title}
+                                    fill
+                                    className="object-contain"
                                     />
+                                </div>
 
-                                    <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 hidden group-hover:block px-3 py-1 text-sm text-white bg-gray-800 rounded-md">
+                                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 hidden group-hover:block px-3 py-1 text-sm text-white bg-gray-800 rounded-md">
                                     {item.title}
-                                    </div>
+                                </div>
                                 </div>
                                 ))}
                             </div>
