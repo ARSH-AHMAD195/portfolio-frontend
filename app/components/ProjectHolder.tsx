@@ -53,7 +53,7 @@ function ProjectHolder() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch("http://127.0.0.1:8000/projects");
+        const res = await fetch("https://portfolio-backend-oyk9.onrender.com/projects");
 
         if (!res.ok) {
           throw new Error("Failed to fetch projects");
