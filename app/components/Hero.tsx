@@ -9,7 +9,7 @@ function HeroSection() {
   return (
     <div className="w-full h-full md:h-[calc(100vh-250px)] my-10 sm:my-16 md:my-24 flex flex-col-reverse md:flex-row justify-center items-center">
         <div className="px-5 w-sm sm:w-lg md:w-xl lg:w-4xl mx-10 text-white">
-            <h1 className="text-5xl md:text-7xl lg:text-[140px] font-black tracking-tighter leading-[0.8]">Arsh Ahmad</h1>
+            <h1 className="text-[8vw] font-black tracking-tighter leading-[0.8]">ARSH <span className="lg:text-transparent stroke-text">AHMAD</span></h1>
             <p className="mt-5 text-sm md:text-xl text-white/70 max-w-7xl">
                 I turn complex problems into scalable software.
                 <br></br>

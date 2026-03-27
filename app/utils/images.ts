@@ -29,6 +29,7 @@ import LinkedInLogo from "../public/linkedin-brands-solid.svg";
 import DisplayPicture from "../public/Arsh_DP.png"
 import HambergerMenu from "../public/bars-solid.svg"
 import CloseMenu from "../public/xmark-solid.svg"
+import Burst from "../public/burst-solid.svg"
 
 export const Icons = {
   // frontend
@@ -61,5 +62,6 @@ export const Icons = {
 
   DisplayPicture,
   HambergerMenu,
-  CloseMenu
+  CloseMenu,
+  Burst
 };

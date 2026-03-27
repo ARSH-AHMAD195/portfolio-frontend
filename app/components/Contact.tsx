@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <section className="w-full h-fit md:h-screen my-5 md:my-20 px-3 flex flex-col-reverse md:flex-row justify-center items-center">
-        <div className="w-full md:w-5xl h-full flex flex-col justify-evenly">
+        <div className="w-full md:w-5xl h-full px-5 flex flex-col justify-evenly">
             <div className="w-full h-fit my-5 text-white">
                 <h1 className="text-[12px] font-extralight">CONTACT</h1>
                 <h1 className="font-extrabold text-4xl md:text-6xl">Get in Touch</h1>

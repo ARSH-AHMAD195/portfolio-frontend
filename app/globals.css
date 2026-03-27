@@ -10,3 +10,8 @@ body {
 
   background-size: 30px 30px;
 }
+
+.stroke-text {
+  -webkit-text-stroke: 1px white;
+  opacity: 0.6;
+}
