@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import ProjectCard from "./ProjectCard";
+import { div } from "motion/react-client";
 
 // 🔹 Status type
 type Status = "completed" | "inProgress" | "planned";
@@ -75,26 +76,23 @@ function ProjectHolder() {
   }, []);
 
   return (
-    <section className="w-full h-fit bg-[#dcfd00] flex justify-center items-center">
-      <div className="px-5 w-7xl">
-        {/* 🔹 Header */}
-        <div className="my-10 flex flex-col justify-between items-center text-sm md:text-lg">
-          <h1 className="text-4xl md:text-6xl font-black">- PROJECTS -</h1>
-          <p className="mt-2">
-            “Built to{" "}
-            <span className="px-2 rounded-md text-black font-bold bg-purple-400">
-              solve
-            </span>
-            , designed to{" "}
-            <span className="px-2 rounded-md text-black font-bold bg-amber-400">
-              scale
-            </span>
-            .”
-          </p>
-        </div>
-
-        {/* 🔹 Content */}
-        <div className="flex flex-col justify-center items-center gap-10">
+    <section className="w-full h-fit bg-[#dcfd00] flex flex-col justify-center items-center">
+      <div className="my-10 flex flex-col justify-between items-center text-sm md:text-lg">
+        <h1 className="text-4xl md:text-6xl font-black">- PROJECTS -</h1>
+        <p className="mt-2">
+          “Built to{" "}
+          <span className="px-2 rounded-md text-black font-bold bg-purple-400">
+            solve
+          </span>
+          , designed to{" "}
+          <span className="px-2 rounded-md text-black font-bold bg-amber-400">
+            scale
+          </span>
+          .”
+        </p>
+      </div>
+      
+      <div className="w-full h-fit flex flex-col items-center relative">
           {loading && <p className="text-lg font-semibold">Loading...</p>}
 
           {error && (
@@ -107,24 +105,20 @@ function ProjectHolder() {
 
           {!loading &&
             !error &&
-            projects.map((project) => (
-              <ProjectCard
-                key={project.pid}
-                project={project}
-              />
-            ))}
-        </div>
-
-        {/* 🔹 Button */}
-        <div className="md:mx-20 my-10 flex justify-end items-center">
-          <Link href={"/projects"}>
-            <button className="mx-5 px-10 py-3 border-3 rounded-lg bg-purple-400 shadow-[4px_6px_0px_#000] cursor-pointer transition-all hover:shadow-[0px_0px_0px_#000] hover:translate-1">
-              <span className="font-bold hover:font-black">
-                View More
-              </span>
-            </button>
-          </Link>
-        </div>
+            projects.map((project, i) => (
+              <div key={project.pid} style={{top: `${20 + (i * 4)}%`, zIndex:10}} className="w-full h-fit flex justify-center gap-10 sticky">          
+                <ProjectCard key={project.pid} project={project} />
+              </div>              
+          ))}
+      </div>
+      <div className="md:mx-20 my-10 flex justify-end items-center">
+        <Link href={"/projects"}>
+          <button className="mx-5 px-10 py-3 border-3 rounded-lg bg-purple-400 shadow-[4px_6px_0px_#000] cursor-pointer transition-all hover:shadow-[0px_0px_0px_#000] hover:translate-1">
+            <span className="font-bold hover:font-black">
+              View More
+            </span>
+          </button>
+        </Link>
       </div>
     </section>
   );

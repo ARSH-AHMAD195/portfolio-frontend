@@ -1,9 +1,10 @@
 'use client';
 
 import Image from "next/image"
-import { Icons } from "../utils/images"
-import Stats from "./Stats"
 import { motion } from "motion/react"
+import { Icons } from "../utils/images"
+import Link from "next/link";
+import Stats from "./Stats"
 
 function HeroSection() {
   return (
@@ -17,11 +18,12 @@ function HeroSection() {
             </p>
             <div className="mt-5 w-2xl flex flex-col justify-start text-sm md:text-xl">
                 <div>
-                    <a href="#">
+                    <Link href={"/contact"}>
                         <button className="px-3 md:px-10 py-3 rounded-lg bg-[#dcfd00] text-black cursor-pointer hover:shadow-[0px_0px_20px_#dcfd00]">
                             <span className="font-bold ">Get in Touch</span>
                         </button>
-                    </a>
+                    </Link>
+
                     <a href="#">
                         <button className="mx-5 px-3 md:px-10 py-3 outline-3 rounded-lg shadow-[4px_6px_0px_#000] cursor-pointer text-[#dcfd00] hover:border-none hover:bg-[#dcfd00] hover:text-black">
                             <span className="font-bold">Download Resume</span>

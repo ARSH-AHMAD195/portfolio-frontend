@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <section className="w-full h-fit md:h-screen my-5 md:my-20 px-3 flex flex-col-reverse md:flex-row justify-center items-center">
+    <section className="w-full h-fit md:h-screen my-5 md:my-10 px-3 flex flex-col-reverse md:flex-row justify-center items-center">
         <div className="w-full md:w-5xl h-full px-5 flex flex-col justify-evenly">
             <div className="w-full h-fit my-5 text-white">
                 <h1 className="text-[12px] font-extralight">CONTACT</h1>

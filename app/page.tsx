@@ -7,7 +7,7 @@ import PageTransition from "./components/PageTransition";
 
 export default function Home() {
   return (
-    <main className="w-full flex flex-col justify-between items-center overflow-x-hidden">
+    <main className="w-full flex flex-col justify-between items-center">
       <Navbar />
       <PageTransition>
         <HeroSection />

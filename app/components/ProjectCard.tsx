@@ -45,7 +45,7 @@ function ProjectCard( { project } : {project : ProjectDetails} ) {
         <div className="w-full mb-2 flex flex-col md:flex-row md:justify-between md:items-center">
           <div className="flex flex-col md:flex-row justify-between items-baseline">
             <h1 className="text-4xl md:text-6xl font-extrabold">{project.pid > 0 && project.pid < 10? "0" + project.pid.toString() : project.pid.toString()}</h1>
-            <p className="text-md md:text-xl ml-3">{project.title}</p>
+            <p className="text-md md:text-3xl ml-3">{project.title}</p>
           </div>
           <div className={`w-max-50 px-3 ml-3 flex justify-start items-center ring-2 text-md rounded-full font-extrabold ${styles.bg} ${styles.text}`}
           >

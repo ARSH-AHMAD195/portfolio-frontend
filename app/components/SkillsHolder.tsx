@@ -117,7 +117,23 @@ function SkillsHolder() {
                     <h1 className="text-5xl md:text-6xl font-black">- SKILLS -</h1>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mx-10 lg:mx-0 lg:px-6 mt-4">
                         {sections.map((section, idx) => (
-                            <div
+                            <motion.div
+                            initial={{
+                            opacity:0,
+                            y: 100
+                            }}
+                            whileInView={{
+                            opacity:1,
+                            y: 0,
+                            transition:{
+                                duration:0.8,
+                                ease: "easeIn"
+                            }
+                            }}
+                            viewport={{
+                            once:true,
+                            margin: "0px 0px -100px 0px"
+                            }}
                             key={idx}
                             className="p-5 bg-white/30 rounded-2xl border flex flex-col"
                             >
@@ -147,7 +163,7 @@ function SkillsHolder() {
                                 </div>
                                 ))}
                             </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

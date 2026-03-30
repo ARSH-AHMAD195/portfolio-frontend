@@ -1,10 +1,26 @@
+'use client';
 import React from 'react';
-import { Blog, BlogData } from './BlogSection'; // Adjust path as needed
-
+import { Blog, BlogData } from './BlogSection';
+import { motion } from "motion/react"
 // Sub-component for individual Blog Cards
 const BlogCard: React.FC<{ blog: Blog }> = ({ blog }) => {
     return (
-        <div className="p-6 border rounded-2xl shadow-sm hover:shadow-md transition-shadow bg-[#0a0a0a] outline-2 outline-white/40">
+        <motion.div 
+        initial={{
+        opacity:0,
+        }}
+        whileInView={{
+        opacity:1,
+        transition:{
+            duration:1,
+            delay:0.2,
+            ease: "easeIn"
+        }
+        }}
+        viewport={{
+        once:true
+        }}
+        className="p-6 border rounded-2xl shadow-sm hover:shadow-md bg-[#0a0a0a] outline-2 outline-white/40 transition-all duration-500 hover:invert">
             <h2 className="text-xl text-white font-extrabold">{blog.title}</h2>
             <span className="text-sm text-[#dcfd00]/40">{blog.date}</span>
             <p className="text-white/40 mt-5 mb-4">{blog.desc}</p>
@@ -18,7 +34,7 @@ const BlogCard: React.FC<{ blog: Blog }> = ({ blog }) => {
                     </span>
                 ))}
             </div>
-        </div>
+        </motion.div>
     );
 };
 

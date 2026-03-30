@@ -1,7 +1,9 @@
+'use client';
+
 import MarqueeComponent from './MarqueeComponent'
 import Image from 'next/image'
 import { Icons } from "../utils/images"
-import { p } from 'motion/react-client'
+import {motion} from "motion/react"
 
 function AboutSection() {
     const Texts = [
@@ -71,7 +73,24 @@ function AboutSection() {
                 ))}
             </MarqueeComponent>
 
-            <div className='w-[90vw] md:w-3xl lg:w-6xl m-5 md:my-10 p-10 text-white bg-[#0a0a0a] border border-white/30 rounded-2xl flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center'>
+            <motion.div 
+            initial={{
+            opacity:0,
+            y: 100
+            }}
+            whileInView={{
+            opacity:1,
+            y: 0,
+            transition:{
+                duration:0.8,
+                delay:0.5,
+                ease: "easeIn"
+            }
+            }}
+            viewport={{
+            once:true
+            }}
+            className='w-[90vw] md:w-3xl lg:w-6xl m-5 md:my-10 p-10 text-white bg-[#0a0a0a] border border-white/30 rounded-2xl flex flex-col-reverse lg:flex-row justify-center lg:justify-start items-center'>
                 <div className='mt-5'>
                     <h1 className='text-4xl md:text-[5vw] font-extrabold'>Arsh <span className='md:text-transparent stroke-text'>Ahmad</span></h1>
                     <div className='h-fit mt-3 text-[10px] md:text-sm text-white/40 flex flex-col justify-evenly'>
@@ -85,16 +104,66 @@ function AboutSection() {
                 <div className='h-fit lg:ml-10 outline-5 outline-[#dcfd00] rounded-2xl'>
                     <Image src={Icons.DisplayPicture} className="w-600 rounded-2xl" alt=''></Image>
                 </div>
-            </div>
+            </motion.div>
 
 
             <div className='w-[90vw] md:w-3xl lg:w-6xl h-fit text-white flex flex-col justify-start'>
                 <div className='mt-5'>
-                    <h1 className='text-[8px] md:text-sm text-white/40'>EXPERINCE</h1>
-                    <h1 className='text-2xl md:text-[4vw] font-extrabold'>PROFESSIONAL <span className='md:text-transparent stroke-text'>EXPERINCE</span></h1>
-                    <div className='h-fit mt-3 text-[10px] md:text-sm text-white/40 flex flex-col justify-evenly'>
+                    <motion.h1 
+                    initial={{
+                        opacity:0
+                    }}
+                    whileInView={{
+                    opacity:1,
+                    y: 0,
+                    transition:{
+                        duration:0.8,
+                        ease: "easeIn"
+                    }
+                    }}
+                    viewport={{
+                    once:true,
+                    margin: "0px 0px -100px 0px"
+                    }}
+                    className='text-[8px] md:text-sm text-white/40'>EXPERINCE</motion.h1>
+                    <motion.h1 
+                    initial={{
+                        opacity:0
+                    }}
+                    whileInView={{
+                    opacity:1,
+                    y: 0,
+                    transition:{
+                        duration:0.8,
+                        delay:0.2,
+                        ease: "easeIn"
+                    }
+                    }}
+                    viewport={{
+                    once:true,
+                    margin: "0px 0px -100px 0px"
+                    }}
+                    className='text-2xl md:text-[4vw] font-extrabold'>PROFESSIONAL <span className='md:text-transparent stroke-text'>EXPERINCE</span></motion.h1>
+                    <motion.div 
+                    initial={{
+                        opacity:0
+                    }}
+                    whileInView={{
+                    opacity:1,
+                    y: 0,
+                    transition:{
+                        duration:0.8,
+                        delay:0.4,
+                        ease: "easeIn"
+                    }
+                    }}
+                    viewport={{
+                    once:true,
+                    margin: "0px 0px -100px 0px"
+                    }}
+                    className='h-fit mt-3 text-[10px] md:text-sm text-white/40 flex flex-col justify-evenly'>
                         A journey of my development career, building products and solving problems.
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
